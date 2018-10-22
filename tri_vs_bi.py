@@ -38,7 +38,7 @@ def __main__():
       flag=1
     else:
       dx = dx + step
-#  with open('../Plotting/data/chshvsgyniQ.plot','wb') as fp:                                                pickle.dump([x,y],fp)
+#  with open('../PlottingMatplotlib/data/chshvsgyniQ.plot','wb') as fp:                                                pickle.dump([x,y],fp)
 
 if __name__=="__main__":
    __main__()
