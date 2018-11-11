@@ -23,6 +23,30 @@ def chsh_BC(P):
               chsh=chsh+P([u,v],[x,y],['B','C'])
   return chsh/4
 
+# takes the probability table and the parameters p and q to return the biased chsh game for Alice and Bob
+def biased_chsh(P,p,q):
+  sum = p * q * ( P([0,0],[0,0]) + P([1,1],[0,0]) )
+  sum = sum + p * (1-q) * ( P([0,0],[0,1]) + P([1,1],[0,1]) )
+  sum = sum + (1-p) * q * ( P([0,0],[1,0]) + P([1,1],[1,0]) )
+  sum = sum + (1-p) * (1-q) * ( P([0,1],[1,1]) + P([1,0],[1,1]) )
+  return sum
+
+# takes the probability table and the parameters p and q to return the biased chsh marginal for Alice
+def biased_chshA(P,p,q):
+  sum = p * q * ( P([0],[0],['A']) )
+  sum = sum + p * (1-q) * ( P([0],[0],['A']) )
+  sum = sum + (1-p) * q * ( P([0],[1],['A']) )
+  sum = sum + (1-p) * (1-q) * ( P([1],[1],['A']) )
+  return sum
+
+# takes the probability table and the parameters p and q to return the biased chsh marginal for Bob
+def biased_chshB(P,p,q):
+  sum = p * q * ( P([0],[0],['B']) )
+  sum = sum + p * (1-q) * ( P([0],[1],['B']) )
+  sum = sum + (1-p) * q * ( P([0],[0],['B']) )
+  sum = sum + (1-p) * (1-q) * ( P([1],[1],['B']) )
+  return sum
+
 # takes the probability table returns the svetlichny game
 def svetlichny_game(P):
   svet=0
