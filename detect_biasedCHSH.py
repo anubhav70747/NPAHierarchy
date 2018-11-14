@@ -35,6 +35,23 @@ def minmax_biased_chshA(P,level,p,q,chsh):
 
   return {'min':Min,'max':Max}
 
+def max_biased_chshAB(P,level,p,q,chsh):
+  Objective = biased_chshA(P,p,q) + biased_chshB(P,p,q) # set objective function
+
+  ineq=[]
+
+  Constraints = biased_chsh(P,p,q)
+  ineq.append(Constraints - chsh)
+  ineq.append(-1*Constraints + chsh)
+
+  sdpRelaxation = SdpRelaxation(P.get_all_operators(), verbose=0)
+  sdpRelaxation.get_relaxation(level, substitutions = P.substitutions,momentinequalities = ineq)
+  sdpRelaxation.set_objective(-Objective)
+  sdpRelaxation.solve(solver="cvxopt")
+  Max = abs(sdpRelaxation.primal)
+
+  return Max
+
 def max_biased_chshB(P,level,p,q,chsh,chshA):
   Objective = biased_chshB(P,p,q) # set objective function
 
