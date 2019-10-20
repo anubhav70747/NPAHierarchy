@@ -140,3 +140,8 @@ def I3322(P):
 def ch_AB(P):
   return - P([1,0],[0,0]) - P([0,0],[0,1]) - P([0,1],[1,1]) + P([0,0],[1,0])
 
+# takes the probability table returns the chsh partial expression
+def chsh_P(P):
+  return P([1,0],[0,0])+ P([0,0],[0,1])+ P([0,0],[1,0])- P([0,0],[1,1])
+
+
