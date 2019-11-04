@@ -136,12 +136,5 @@ def I3322(P):
   sum = sum - P([0],[0],'A') - 2*P([0],[0],'B') - P([0],[1],'B') + P([0,0],[0,0],['A','B']) + P([0,0],[1,0],['A','B']) + P([0,0],[2,0],['A','B']) + P([0,0],[0,1],['A','B']) + P([0,0],[1,1],['A','B']) - P([0,0],[2,1],['A','B']) + P([0,0],[0,2],['A','B']) - P([0,0],[1,2],['A','B'])
   return sum
 
-# takes the probability table returns the CH game for Alice and Bob
-def ch_AB(P):
-  return - P([1,0],[0,0]) - P([0,0],[0,1]) - P([0,1],[1,1]) + P([0,0],[1,0])
-
-# takes the probability table returns the chsh partial expression
-def chsh_P(P):
-  return P([1,0],[0,0])+ P([0,0],[0,1])+ P([0,0],[1,0])- P([0,0],[1,1])
 
 
