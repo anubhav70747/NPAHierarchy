@@ -29,7 +29,7 @@ def __main__():
   sdpRelaxation = SdpRelaxation(P.get_all_operators(), verbose=0)
   sdpRelaxation.get_relaxation(2, substitutions = P.substitutions,momentinequalities = ineq)
   sdpRelaxation.set_objective(-Objective)
-  sdpRelaxation.solve(solver="cvxopt")
+  sdpRelaxation.solve(solver="mosek")
 # collect data points
   print(abs(sdpRelaxation.primal))
 
