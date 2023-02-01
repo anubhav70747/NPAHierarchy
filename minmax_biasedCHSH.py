@@ -3,7 +3,7 @@ from ncpol2sdpa import *
 from inequalities import *
 import pickle
 # use inequalities from inequalities.py
-
+# for evaluating max and min values of biased CHSH 
 def minmax_biased_chsh(P,level,p,q):
   Objective = biased_chsh(P,p,q) # set objective function
   sdpRelaxation = SdpRelaxation(P.get_all_operators(), verbose=0)

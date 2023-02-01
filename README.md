@@ -1,4 +1,4 @@
-This repo contains code for using NPA hierarchy for bounding the set of Bell correlations (Python + ncpol2sdpa + picos + Cvxopt)
+This repo contains code for using NPA hierarchy for bounding the set of Bell correlations (Python + ncpol2sdpa + mosek)
 - **example.py**: A sample code.
 - **inequalities.py**:contains definitions of several inequalities.
 - **monogamy_vs_svet.py**: for finding varying monogamy relations with changing Svetlichny's inequality.
@@ -6,3 +6,14 @@ This repo contains code for using NPA hierarchy for bounding the set of Bell cor
 - **detect_CHSH.py**: for finding critical detection efficiency for CHSH game.
 - **detect_CHSH2.py**: for finding critical detection efficiency for CHSH game repeated twice.
 - **detect_I3322.py**: for finding critical detection efficiency for I3322 inequality.
+- **detect_CHSH_exp.py**: for finding the critical detection efficiency for the CHSH inequality.
+- **detect_B3.py**: for evaluating critical detection efficiency of B3 inequality.
+- **detect_EBI.py**: for evaluating critical detection efficiency of EBI inequality.
+- **ExtendedRAC.py**: for evaluating the maximum success probability of entanglement assisted classical communication protocols for generalized RAC. 
+- **minmax_biasedCHSH.py**: for evaluating maximum and minimum values of biased CHSH.
+- **maxB4.py**: for evaluating maximum values of B4 inequality.
+- **maxUnbalancedTri.py**: for evaluating maximum value unbalanced tripartite inequality.
+- **maxHardy.py**: for evaluating maximum value of Hardy's inequality.
+- **CHSHvsMarginal.py**: for evaluating the maximum value of CHSH given constraints on marginals.
+- **LRvsCHSHTwoAlicesOneBob.py**: for evaluating local randomness with contraints on CHSH values corresponding to two Alices and Bob.
+- **maxCHSHaBvsCHSHAB.py**: for evaluating CHSH between second Alice and Bob with inefficient detectors and assignment strategy given the CHSH between first Alice and Bob.

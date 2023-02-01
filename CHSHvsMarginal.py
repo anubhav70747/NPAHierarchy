@@ -2,8 +2,8 @@ from __future__ import print_function
 from ncpol2sdpa import *
 from inequalities import * 
 import pickle
-# just a basic code to run tri vs bi (or reverse) party NPA optimization
-# use inequalities from inequalities.py
+# evaluate maximum of CHSH given constraints on marginals
+
 
 
 

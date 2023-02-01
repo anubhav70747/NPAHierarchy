@@ -1,8 +1,7 @@
 from __future__ import print_function
 from ncpol2sdpa import *
 import pickle
-# just a basic code to run tri vs bi (or reverse) party NPA optimization
-# use inequalities from inequalities.py
+# evaluate the maximum success probability of entanglement assisted classical communication protocols for generalized RAC 
 
 def rac(P,z):
   Pwin = 0
