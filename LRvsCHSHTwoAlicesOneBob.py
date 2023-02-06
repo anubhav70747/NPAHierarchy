@@ -1,9 +1,7 @@
 from __future__ import print_function
 from ncpol2sdpa import *
 import pickle
-# just a basic code to run tri vs bi (or reverse) party NPA optimization
-# use inequalities from inequalities.py
-
+# for evaluating local randomness with contraints on CHSH values corresponding to two Alices and Bob
 def chsh_AB(P):
   chsh=0
   for x in range(2):

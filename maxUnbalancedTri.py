@@ -1,7 +1,7 @@
 from __future__ import print_function
 from ncpol2sdpa import *
 import pickle
-# for evaluating maximum value unbalanced tripartite inequality
+#   
 def expectation_value_tri(P, input_):
     vals = [-1, 1]
     return sum(a*b*c*P([a, b, c], input_) for a in vals for b in vals for c in vals)
