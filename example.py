@@ -3,7 +3,7 @@ from ncpol2sdpa import *
 import pickle
 # just a basic code to run tri vs bi (or reverse) party NPA optimization
 # use inequalities from inequalities.py
-
+# whats up?
 def chsh_AB(P):
   chsh=0
   for x in range(2):
@@ -29,7 +29,7 @@ def __main__():
   sdpRelaxation = SdpRelaxation(P.get_all_operators(), verbose=0)
   sdpRelaxation.get_relaxation(2, substitutions = P.substitutions,momentinequalities = ineq)
   sdpRelaxation.set_objective(-Objective)
-  sdpRelaxation.solve(solver="mosek")
+  sdpRelaxation.solve()
 # collect data points
   print(abs(sdpRelaxation.primal))
 
